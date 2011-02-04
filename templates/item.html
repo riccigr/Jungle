@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block corpo %}
 
+<form action="" method="post" >
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Atualizar</button>
+</form>
+
+{% endblock %}
+
+
+
+<!--
 <h1>{{ item.titulo }}</h1>
 
 <p>{{ item.data|date:'d/m/Y'}} - {{ item.hora }}</p>
@@ -8,5 +19,5 @@
 <pre>
 {{ item.descricao }}
 </pre>
+-->
 
-{% endblock %}
