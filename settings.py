@@ -77,10 +77,16 @@ TEMPLATE_DIRS = (
     os.path.join(ROOTDIR, 'templates'),
 )
 
+# These are where these links are redirect
+LOGIN_URL = "/login/"
+LOGOUT_URL = "/logout/"
+LOGIN_REDIRECT_URL = "/"
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+	'django.contrib.admin',
     'agenda',
 )
